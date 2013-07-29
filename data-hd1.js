@@ -1,121 +1,3 @@
-//javascript document	
-//Summer 2007 Lab Data
-
-//initialize index values. These vars keep track of current viewing states and are called for navigation
-var slide_index=0; //lab component (specimen group)
-var image_index=0; //image within a specimen group
-
-var list = "";
-
-// info and lec_info are displayed at the bottom of lecture and lab index pages and supply instructions
-var info = "<br><span class=\"info\"><span style=\'color:#000000'>INTSTRUCTIONS</span><br>Click on one of the thumbnails to view its full sized image and description. <br>Red Case links (<span style='color: #993333'>Case NNN</span>) lead to the first slide of the case. <br><br><img src='09_images/scope.gif' /> icon means there is a virtual slide available for a given specimen.  Click it to open the Spectrum web viewer.<br>When asked for login info, use:<br> user: lampstudent<br>pass: path0l0gy (p-a-t-h-'zero'-l-'zero'-g-y)<br> Note that you must be connected to the internet in order to view the virtual slides."; 
-var lec_info = "<br><span class=\"info\"><span style=\'color:#000000'>INTSTRUCTIONS</span><br><br>Click on the <span style='color: #993333'>lecture title</span> to view its 'lectures online' page.<br>Click the PPT icon <img src='09_images/pps_ccc.gif /> to download the lecture presentation.";
-
-//lab image directories.
-var img = "_images/";
-var thmb = "_images/";
-var mkd = "_marked/";
-//var lec_dir = "Lectures/";
-//var rev_dir = "Reviews/";
-var svs_dir ="http://images.pathology.umn.edu/";
-
-//current lab directories relative to Content folder
-var cardio_lab01_dir = "Labs/Cardio_Lab01/";
-var cardio_lab02_dir = "Labs/Cardio_Lab02/";
-var cardio_lab03_dir = "Labs/Cardio_Lab03/";
-var resp_lab01_dir = "Labs/Resp_Lab01/";
-var resp_lab02_dir = "Labs/Resp_Lab02/";
-
-//powerpoint link icon
-var link_ppt = "<img class='thumbs' src='09_images/ppt.png' />";
-
-//PDF link icon
-var link_pdf = "<img class='thumbs' src='09_images/pdf.png' />";
-
-//help icon
-var link_help ="<a href='#' onclick='show_help()'>?</a>";
-
-//help page section separator
-var line_sep = "<br><br><hr class=\"hr1\" /><br>";
-
-/* Templates
-
-//lectures
-var pdX_lecs =
-[
-	['title', 'date', 'time', 'pages', 'instructor', 'ppt', 'lol']
-];
-
-//flash videos
-var videos =
-[
-	["flv", year#, "organ", lab#, "title", "presenter"]
-];
-
-//reviews
-var reviews =
-[
- 	["title", "file_extension", "filename_sansextension"],
-];
-
-//specimen images
-var period_lab01_case01 =
-[
-	['filename.jpg', 'description', 1 => annotation file exists],
-];
-
-//lab components (specimen collections)
-var lab =
-[
-	['specimen_name', 'description', specimen, lab_dir, 'svs_file'],
-]
-
-//period contents (lab collection)
-var period =
-[
-	['lab_title', 'lab', 'description'],
-]
-*/
-
-//if a property is not applicable, leave the default value in.
-//for example, if there is no powerpoint file, leave 'ppt' in place.
-
-var pd1_lecs = 
-[
-	['Chronic Obstructive Lung Disease', 'Tues, 9/8', '11:15am', '712-713, 716-728', 'Ewing', 'Resp_Lec01_ObLuDis.ppt', 'lol', 'Resp_Lec01_ObLuDis.pdf'],
-	['Lung Cancer', 'Tues, 9/8', '1:25pm', '757-766', 'Ewing', 'Resp_Lec04_Cancer.ppt', 'lol', 'Resp_Lec04_Cancer.pdf'],
-	['Vascular and Cardiac Diseases I: Atherosclerosis and Ischemic Heart Disease', 'Thurs, 9/10', '1:25pm', '515-525, 571-587', 'D. Powell', 'CV_Lec01_ACA.ppt', 'lol', 'CV_Lec01_ACA.pdf'],
-	['Vascular and Cardiac Diseases II: Aneurysms and Vasculitis', 'Fri, 9/11', '1:25pm', '529-553, 1366-1368', 'D. Powell', 'CV_Lec02_AorticDis.ppt', 'lol', 'CV_Lec02_AorticDis.pdf'],
-	['Acute Respiratory Distress Syndrome (ARDS)', 'Tues, 9/15', '1:25pm', '714-716', 'Ewing', 'Resp_Lec03_ARDS.ppt', 'lol', 'Resp_Lec03_ARDS.pdf'],
-	['Vascular and Cardiac Diseases III: Myocardial Disease and Tumors', 'Tues, 9/22', '1:25pm', '587, 601-615, 525-530', 'D. Powell', 'CV_Lec04_MCHTN.ppt', 'lol', 'CV_Lec04_MCHTN.pdf'],
-	['Pulmonary Infections; CPC - Pathophysiology/Pathology', 'Thurs, 9/24', '1:25pm', '366-368, 381-393, 397-401, 747-757, 766-767', 'Ewing/Kempainen', 'Resp_Lec02_Infections.ppt', 'lol', 'Resp_Lec02_Infections.pdf'],
-	['Interstitial Lung Disease', 'Mon, 9/28', '10:10am', '728-732, 737-741', 'Ewing', 'Resp_Lec05_ILD.ppt', 'lol', 'Resp_Lec05_ILD.pdf'],
-	['Pneumoconiosis', 'Mon, 9/28', '1:25pm', '732-737, 768-770', 'Ewing', 'Resp_Lec06_Pneum.ppt', 'lol', 'Resp_Lec06_Pneum.pdf'],
-	['Vascular and Cardiac Diseases IV: Hypertensive Cardiovascular Disease and Pulmonary Hypertension', 'Tues, 9/29', '1:25pm', '525-529, 587-588, 601-615', 'D. Powell', 'CV_Lec03_PulmHT.ppt', 'lol', 'CV_Lec03_PulmHT.pdf'],
-    ['Lung Cancer; CPC - Pathophysiology/Pathology', 'Mon, 10/5', '10:10am', '757-766', 'Ewing/Kempainen', 'Resp_Lec04_Cancer.ppt', 'lol', 'Resp_Lec04_Cancer.pdf'],
-    ['Congenital Cardiovascular Disease', 'Mon, 10/5', '11:15am', '564-571', 'Dexter', 'CV_Lec06_CHD.ppt', 'lol', 'CV_Lec06_CHD.pdf'],
-	['Vascular and Cardiac Diseases V: Valvular Heart Disease', 'Mon, 10/5', '1:25pm', '588-601', 'D. Powell', 'CV_Lec05_VHD.ppt', 'lol', 'CV_Lec05_VHD.pdf'],	
-];
-
-var lecs = pd1_lecs;
-
-var pd1_videos =
-[
-	["flv", "year", "organ", "lab", "title", "presenter"]
-];
-
-var pd1_reviews =
-[
- 	["title", "file_extension", "filename_sansextension"]
-];
-
-
-
-
-
-
-
-
 // CARDIO LAB 01 COMPONENTS
 
 var cardio_specimen1 =
@@ -138,14 +20,14 @@ var cardio_case1 =
 	['Slide12.jpg', 'Gross: Thrombus in apex of left ventricle.', 1],
 	['Slide13.jpg', 'Micro: Thrombus in apex of left ventricle.', 1],
 	['Slide15.jpg', 'Ischemic infarct (arrow) involving renal cortex.', 1],
-	['Slide16.jpg', 'Passive congestion of the liver, the so-called “nut-meg” liver that can be seen grossly. This is a manifestation of right heart failure, which is often seen after left heart failure associated with acute MI (top). The passively congested liver shows retained hepatic architecture with a distended central vein (arrow) and adjacent sinusoids congested with red blood cells (bottom).', ],
+	['Slide16.jpg', 'Passive congestion of the liver, the so-called ï¿½nut-megï¿½ liver that can be seen grossly. This is a manifestation of right heart failure, which is often seen after left heart failure associated with acute MI (top). The passively congested liver shows retained hepatic architecture with a distended central vein (arrow) and adjacent sinusoids congested with red blood cells (bottom).', ],
 	['Slide17.jpg', 'This patient had a stroke secondary to his MI.', ]
 ];
 
 var cardio_case2 =
 [
 	['Slide26.jpg', 'Diagram of left ventricular free wall rupture, which usually occurs 4-7 days after an acute MI when the wall is weakest. Often having catastrophic results by causing bleeding into the pericardial space (hemopericardium) resulting in cardiac tamponade.', ],
-	['Slide27.jpg', 'Gross photo of a left ventricular free wall rupture (pericardium has been removed). This anterior location is typical for ruptures as it is for aneurysms, for this reason anterior wall MI’s in general have a worse prognosis', ],
+	['Slide27.jpg', 'Gross photo of a left ventricular free wall rupture (pericardium has been removed). This anterior location is typical for ruptures as it is for aneurysms, for this reason anterior wall MIï¿½s in general have a worse prognosis', ],
 	['Slide28.jpg', 'Hemopericardium occurs most commonly with ventricular wall rupture a few days after an MI, or following external aortic rupture of a proximal extension of an aortic dissection.', ]
 ];
 
@@ -157,7 +39,7 @@ var cardio_case3 =
 
 var cardio_case4 =
 [
-	['Slide20.jpg', 'Cardiac aneurysms often cause left heart failure, as the ventricle, even with good force, isn’t able to put out the same volume of blood due to unloading into the aneurysmal wall. Another common complication shown here is mural thrombus formation which gives potential for thromboembolisation. Only rarely will an aneurysm rupture.', ],
+	['Slide20.jpg', 'Cardiac aneurysms often cause left heart failure, as the ventricle, even with good force, isnï¿½t able to put out the same volume of blood due to unloading into the aneurysmal wall. Another common complication shown here is mural thrombus formation which gives potential for thromboembolisation. Only rarely will an aneurysm rupture.', ],
 	['Slide21.jpg', 'Mural thrombus formation is often seen after myocardial infarctions, especially when a ventricular aneurysm has formed. Parts of this thrombus may embolize and cause ischemic damage, most commonly going to the brain, kidney, spleen, and the extremities. ', 1],
 	['Slide22.jpg', 'Aneurysmal dilitation of left ventricle. Note the thinness of the wall.', ],
 	['Slide23.jpg', 'There has been a previous extensive transmural myocardial infarction involving the free wall of the left ventricle. Note that the thickness of the myocardial wall is normal superiorly, but inferiorly is only a thin fibrous wall. The infarction was so extensive that, after healing, the ventricular wall was replaced by a thin band of collagen, forming an aneurysm. Such an aneurysm represents non-contractile tissue that reduces stroke volume and strains the remaining myocardium. The stasis of blood in the aneurysm predisposes to mural thrombosis.', 1],
@@ -190,7 +72,7 @@ var cardio_case7 =
 	['Slide01.jpg', 'Diagram of the anatomic abnormalities and typical shunt of tetralogy of Fallot. Notice the RV hypertrophy, large VSD, over-riding aorta and the pulmonary stenosis. The shunt is a result of the large VSD (which serves to equalize pressures between the right and left ventricles) and the pulmonic stenosis which directs more blood to the systemic circulation.', ],
 	['Slide02.jpg', 'Gross example of tetralogy of Fallot. The interior of the right ventricle is exposed showing a large perimembranous VSD (D) and an aorta (A) straddling (ie over-riding) the VSD. A probe (arrow) is positioned inside the stenotic subpulmonary infundibulum.', 1],
 	['Slide03.jpg', 'This is an example of tetralogy of Fallot opened sagittally. The aorta and its valve (A, V) clearly straddle the VSD (D) such that the aorta appears to arise equally from each ventricle. The right ventricular (RV) is clearly hypertrophic as it is nearly as thick as left ventricle (LV).', 1],
-	['Slide04.jpg', 'The “boot-shaped” heart is an x-ray finding associated with tetralogy of Fallot (arrow at the “toe end” of the boot). A right sided aorta is present in ~1/3 of tetralogy patients and when seen on chest films is virtually diagnostic of tetralogy.', ]
+	['Slide04.jpg', 'The ï¿½boot-shapedï¿½ heart is an x-ray finding associated with tetralogy of Fallot (arrow at the ï¿½toe endï¿½ of the boot). A right sided aorta is present in ~1/3 of tetralogy patients and when seen on chest films is virtually diagnostic of tetralogy.', ]
 ];
 
 var cardio_case8 =
@@ -354,8 +236,8 @@ var resp_case1 = [
 ];
 var resp_case2 = [
 	['Picture5.jpg','Hemorrhagic, diffusely consolidated pulmonary parenchyma.',],
-	['Picture6.jpg','Diffuse Alveolar Damage –ARDS. Hyaline membranes are lining the alveolar ducts and alveolar septa.',],
-	['Picture7.jpg','Micro: Diffuse Alveolar Damage – ARDS. On higher power, the hyaline membranes are evident.',],
+	['Picture6.jpg','Diffuse Alveolar Damage ï¿½ARDS. Hyaline membranes are lining the alveolar ducts and alveolar septa.',],
+	['Picture7.jpg','Micro: Diffuse Alveolar Damage ï¿½ ARDS. On higher power, the hyaline membranes are evident.',],
 	['Picture8.jpg','X-Ray and autopsy specimen showing extensive interstitial fibrosis.',],
 	['Picture9.jpg','The hyaline membranes and alveolar exudate is invaded by fibroblasts that deposit collagen which becomes incorporated into the interstitium.  Notice the massive proliferation of fibroblasts.',]
 ];
@@ -379,7 +261,7 @@ var resp_case6 = [
 	['Picture20.jpg','CMV Interstitial Pneumonia. CMV inclusion - Enlarged cell with large eosinophilic intranuclear inclusion surrounded by a halo. Notice the presence of hyaline membranes.  CMV infection is a cause of diffuse alveolar damage.',],
 	['Picture21.jpg','In addition to CMV infection (upper half), there is an intraalveolar pink, foamy, granular exudate which is characteristic of infection by the fungus Pneumocystis jiroveci (previously known as Pneumocystis carinii). A GMS stain (right panel) confirms the presence of organisms.',],
 	['Picture22.jpg','Adenovirus pneumonia. A focus of intraalveolar hemorrhage and parenchymal necrosis is observed.',],
-	['Picture23.jpg','Adenovirus pneumonia.  The bronchiolar epithelium shows a squamoid appearance and numerous nuclei with a “smudged” chromatin pattern.',],
+	['Picture23.jpg','Adenovirus pneumonia.  The bronchiolar epithelium shows a squamoid appearance and numerous nuclei with a ï¿½smudgedï¿½ chromatin pattern.',],
 	['Picture24.jpg','Adenovirus pneumonia:  Immunoperoxidase reaction using antibodies vs adenovirus.  Notice the presence of numerous infected cells.',]
 ];
 var resp_case7 = [
@@ -418,7 +300,7 @@ var resp2_case1 = [
 	['Picture3.jpg','Drawing representing A. Centrilobular emphysema, B. Panacinar emphysema.',],
 	['Picture4.jpg','Left panel: normal lung.  Right panel: centrilobular emphysema.',],
 	['Picture5.jpg','Centrilobular emphysema.',],
-	['Picture6.jpg','Emphysema showing rupture of septs and hyperdistention of alveolar sacs.  “Simplification” of the pulmonary parenchyma.',]
+	['Picture6.jpg','Emphysema showing rupture of septs and hyperdistention of alveolar sacs.  ï¿½Simplificationï¿½ of the pulmonary parenchyma.',]
 ];
 var resp2_case2 = [
 	['Picture7.jpg','Central Squamous Cell Carcinoma. This is a squamous cell carcinoma of the lung that is arising centrally in the lung (as most squamous cell carcinomas do). It is obstructing the right main bronchus. The neoplasm is very firm and has a pale white to tan cut surface. Histologic appearance of squamous cell carcinoma showing solid growth pattern and keratinization.',],
@@ -437,7 +319,7 @@ var resp2_case3 = [
 ];
 var resp2_case4 = [
 	['Picture18.jpg','Small Cell Carcinoma. Central tumor which usually has spread to mediastinal lymph nodes (and throughout body) by the time of its diagnosis. The photo on the right shows additional detail of the central tumor.',],
-	['Picture19.jpg','Small Cell Carcinoma. Small cells with very little cytoplasm. The nuclei do not have nucleoli. These cells are very fragile and frequently break.  The nucleic acids derived from the broken nuclei produce the basophilic smearing in vascular structures that is illustrated in the insert (Azzopardi’s phenomenon).',],
+	['Picture19.jpg','Small Cell Carcinoma. Small cells with very little cytoplasm. The nuclei do not have nucleoli. These cells are very fragile and frequently break.  The nucleic acids derived from the broken nuclei produce the basophilic smearing in vascular structures that is illustrated in the insert (Azzopardiï¿½s phenomenon).',],
 	['Picture20.jpg','Another example of small cell carcinoma.',],
 	['Picture21.jpg','This tumor type expresses neuroendocrine markers such as synaptophysin and chromogranin.  A cytokeratin stain, which is always positive, is frequently performed to differentiate this tumor from other neoplasms with a small round cell morphology such as lymphomas.',]
 ];
