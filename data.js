@@ -457,16 +457,27 @@ var Resp_Lab02 =
 
 // YEAR II PERIOD I COMPONENT LABS
 
-var period1 =
+var cardio =
 [
 	['Lab 01- Cardio', 'Cardio_Lab01', 'Coronary Artery Disease', Cardio_Lab01],
-	['Lab 02- Resp', 'Resp_Lab01', 'COPD and Lung Cancer', Resp_Lab01],
 	['Lab 03- Cardio', 'Cardio_Lab02', 'Valve and Muscle Disease', Cardio_Lab02],
-	['Lab 04- Resp', 'Resp_Lab02', 'Interstitial Lung Disease and Infection', Resp_Lab02],
 	['Lab 05- Cardio', 'Cardio_Lab03', 'Congenital Heart Disease', Cardio_Lab03]
 ];
 
-console.log(period1);
+var resp =
+[
+	['Lab 02- Resp', 'Resp_Lab01', 'COPD and Lung Cancer', Resp_Lab01],
+	['Lab 04- Resp', 'Resp_Lab02', 'Interstitial Lung Disease and Infection', Resp_Lab02],
+];
+
+console.log(cardio);
+for (lab in cardio) {
+	lab_cases = cardio[lab][3]
+	for (my_case in lab_cases) {
+		console.log(lab_cases[my_case]);
+	};
+};
+console.log(resp);
 
 // NEURO LAB 01 COMPONENTS
 
