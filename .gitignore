@@ -36,3 +36,6 @@ nosetests.xml
 
 # Backup files
 .bak
+
+# ...and don't share our cookies!
+cookies.txt
