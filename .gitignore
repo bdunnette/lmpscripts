@@ -39,3 +39,6 @@ nosetests.xml
 
 # ...and don't share our cookies!
 cookies.txt
+
+*.csv
+*.obo
