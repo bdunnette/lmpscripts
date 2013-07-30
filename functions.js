@@ -1,4 +1,4 @@
-collections = [summer, cardio, resp, neuro, bjs, endo, repro, renal, gi, heme];
+collections = [cardio, resp, neuro, bjs, endo, repro, renal, gi, heme, summer];
 //console.log(collections);
 for (collection in collections) {
 	collection_labs = collections[collection];
@@ -14,7 +14,7 @@ for (collection in collections) {
 			case_resources = case_data[2];
 			for (resource in case_resources) {
 				resource_data = case_resources[resource];
-				document.write([['http://160.94.51.142/meded', lab_path, resource_data[0]].join('/'), JSON.stringify(case_title), JSON.stringify(resource_data[1])].join(), '<br/>');
+				document.write([['http://160.94.51.142/meded', lab_path.toLowerCase(), '_images', resource_data[0]].join('/'), JSON.stringify(case_title), JSON.stringify(resource_data[1]).replace(/(\r\n|\n|\r)/gm,"")].join(), '<br/>');
 			};
 		};
 	};
