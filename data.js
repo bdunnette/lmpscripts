@@ -92,7 +92,7 @@ var cardio_case4 =
 
 var cardio_specimen2 =
 [
-	['Slide29.jpg', 'Septal rupture after an MI may be fatal, but not in all cases - it depends on the size of the defect.', ],	
+	['Slide29.jpg', 'Septal rupture after an MI may be fatal, but not in all cases - it depends on the size of the defect.', ],
 	['Slide18.jpg', 'Most often only part of the papillary muscle ruptures causing insufficiency, but if the entire muscle trunk tears (as shown in this diagram) sudden death results.', ],
 	['Slide19.jpg', 'Partial tear of a papillary muscle after infarction. Partial tears will result in mitral insufficiency and produce a mid-late systolic click due to prolapse of the valve. ', 1]
 ];
@@ -156,7 +156,7 @@ var cardio_case12 =
 	['Slide38.jpg', 'Syphilitic aortitis with aortic dilatation limited to the ascending aorta. The damage to the vessel wall often extends into the aortic valve ring, causing severe aortic valve insufficiency. ', 1]
 ];
 
-var cardio_unknown1 = 
+var cardio_unknown1 =
 [
 	['Unknown1-1.jpg', 'Case details will be available in lab between cardio lab 2 and cardio lab 3.',],
 	['Unknown1-2.jpg', 'Case details will be available in lab between cardio lab 2 and cardio lab 3.',],
@@ -246,7 +246,7 @@ var cardio_case19 =
 	['Slide32d.jpg', 'Higher Power', ]
 ];
 
-var resp_unknown1 = 
+var resp_unknown1 =
 [
 	['Unknown2-1.jpg', 'Case details will be available in lab between cardio lab 3 and respiratory lab 1.',],
 	['Unknown2-2.jpg', 'Case details will be available in lab between cardio lab 3 and respiratory lab 1.',],
@@ -470,14 +470,7 @@ var resp =
 	['Lab 04- Resp', 'Resp_Lab02', 'Interstitial Lung Disease and Infection', Resp_Lab02],
 ];
 
-console.log(cardio);
-for (lab in cardio) {
-	lab_cases = cardio[lab][3]
-	for (my_case in lab_cases) {
-		console.log(lab_cases[my_case]);
-	};
-};
-console.log(resp);
+
 
 // NEURO LAB 01 COMPONENTS
 
@@ -499,7 +492,7 @@ var neuro_lab01_intro =
     ['Slide15.jpg', 'Primary demyelination is characterized by loss of myelin and relative preservation of axons. Tract degenerations have an equal loss of both.',],
     ['Slide16.jpg', 'Microglia have a rod-like shape with small dendritic processes. Their morphology is best demonstrated by immunohistochemistry for leukocytes of monocyte/macrophage lineage. Microglia are repopulated by circulating monocytes.',],
     ['Slide17.jpg', 'As microglia become more reactive their rod-like morphology may be accentuated and their nuclei become highly elongated. In other situations where they have a phagocytic function, they aggregate into microglial nodules.',],
-    ['Slide18.jpg', 'Microglia may attain the morphology of classical macrophages and frequently are the major source of phagocytes in smaller lesions. In larger lesions such as infarcts or multiple sclerosis plaques, many macrophages are derived directly from circulating monocytes.',],    
+    ['Slide18.jpg', 'Microglia may attain the morphology of classical macrophages and frequently are the major source of phagocytes in smaller lesions. In larger lesions such as infarcts or multiple sclerosis plaques, many macrophages are derived directly from circulating monocytes.',],
 ];
 
 var neuro_lab01_case01 =
@@ -514,7 +507,7 @@ var neuro_lab01_case01 =
 	['Slide27.jpg', 'Schematic of typical distribution of saccular aneurysms.  Approximately 90% occur in the anterior circulation with 10% in the posterior circulation.  The most common site in the posterior circulation is the basilar tip as indicated above but some of them are also on branches of the vertebral arteries, particularly the posterior inferior cerebellar artery (PICA).',],
 	['Slide28.jpg', 'An elastin stain of a section of a cerebral saccular aneurysm.  Note the occurrence of the aneurysm at the site of a bifurcation of a vessel.  Also note the absence of the internal elastic lamina in the neck and sac of the aneurysm.',],
 	['Slide29.jpg', 'Take home points.',]
-	
+
 ];
 
 var neuro_lab01_case02 =
@@ -824,7 +817,7 @@ var neuro_lab04_case05 =
 
 // BJS LAB 03 COMPONENTS
 
-var minicase40 = 
+var minicase40 =
 [
 	['Minicase40_01.jpg', 'Demonstrates the vascular supply to the metaphyseal end of bones where osteomyelitis commonly occurs by hematogenous spread to the microvasculature.'],
 	['Minicase40_02.jpg', 'Acute osteomyelitis demonstrating acute suppuration and fragments of irregular scalloped necrotic bone (sequestrum).'],
@@ -848,7 +841,7 @@ var minicase40 =
 	['Minicase40_19.jpg', 'Electron micrographs at low and high magnification demonstrating amyloid. At high magnification (slide 19) amyloid has characteristic haphazard filamentous deposition.']
 ];
 
-var minicase54 = 
+var minicase54 =
 [
 	['Minicase54_01.jpg', 'Gross image of swollen joint'],
 	['Minicase54_02.jpg', 'MSU crystal, brightfield illumination'],
@@ -856,7 +849,7 @@ var minicase54 =
 	//['Minicase54_04.jpg', 'MSU: Cytospin preparation with Wrightís stain, 60x, compensated polarized light']
 ];
 
-var minicase55 = 
+var minicase55 =
 [
 	['Minicase55_01.jpg', 'Chondrocalcinosis ñ calcification of cartillage within knee joint'],
 	['Minicase55_02.jpg', 'CPPD crystal, brightfield illumination'],
@@ -897,7 +890,7 @@ var micro226 =
 	['Skin_Lab01_14.jpg', '40x - The central necrobiotic focus is homogeneous and eosinophilic.']
 ];
 
-var micro350 = 
+var micro350 =
 [
 	['Skin_Lab01_15.jpg', '2x - The marrow space is replaced by fibrosis and an inflammatory infiltrate. Bone spicules appear thin.'],
 	['Skin_Lab01_16.jpg', '10x - Neutrophils surround bone spicules which appear ragged due to irregular resorbtion. Osteocytes are not present in most lacunae ie: the bone is not viable.'],
@@ -1064,7 +1057,7 @@ var micro216 =
 
 var N81124 =
 [
-	
+
 	['Skin_Lab03_47.jpg', 'Herpes labialis. Grouped confluent vesicles with an erythematous rim on the lips.'],
 	['Skin_Lab03_48.jpg', 'Herpetic whitlow. Painful, grouped, confluent vesicles on an erythematous edematous base on the distal finger.'],
 	['Skin_Lab03_49.jpg', 'Low power appearance of a herpetic vesicle. The epidermis is split and filled `with fluid and acantholytic keratinocytes. The vesicle [X] is formed by so-called reticular (ìnet-likeî) degeneration of the epidermis. The vesicle is filled with serous fluid and keratinocytes that have lost their inter-connections (acanthosis). Many of these acantholytic keratinocytes demonstrate viral cytopathic changes that are better seen on higher magnification.'],
@@ -1125,7 +1118,7 @@ var Neuro_Lab01 =
 	// PRE-2010 CASES
     //['Case 04', 'Glioblastoma multiforme', neuro_lab01_case04, neuro_lab01_dir, '@2883'],
 	//['Case 05', 'Medullablastoma', neuro_lab01_case05, neuro_lab01_dir, ]
-	
+
 ];
 
 var Neuro_Lab02 =
@@ -1135,7 +1128,7 @@ var Neuro_Lab02 =
 	['Case 03', 'Parkinson\'s Disease', neuro_lab02_case03, neuro_lab02_dir, ],
 	['Case 04', 'Alzheimer\'s Disease', neuro_lab02_case04, neuro_lab02_dir, '@2741'],
 	['Case 05', 'ALS', neuro_lab02_case05, neuro_lab02_dir, ]
-	
+
 ];
 
 var Neuro_Lab03 =
@@ -1145,7 +1138,7 @@ var Neuro_Lab03 =
 	['Case 03', 'Aspergillosis', neuro_lab03_case03, neuro_lab03_dir, ],
 	['Case 04', 'Multiple Sclerosis', neuro_lab03_case04, neuro_lab03_dir, '@2698'],
 	['Case 05', 'Guillain-Barre Syndrome', neuro_lab03_case05, neuro_lab03_dir, ]
-	
+
 ];
 
 var Neuro_Lab04 =
@@ -1155,7 +1148,7 @@ var Neuro_Lab04 =
 	['Case 03', 'Glioblastoma multiforme', neuro_lab04_case03, neuro_lab04_dir, '@2883'],
 	['Case 04', 'Medullablastoma', neuro_lab04_case04, neuro_lab04_dir, ],
 	['Case 05', 'Meningioma', neuro_lab04_case05, neuro_lab04_dir, ]
-	
+
 ];
 
 var BJS_Lab01 =
@@ -1199,32 +1192,34 @@ var BJS_Lab03 =
 
 // HD2 PATHOLOGY COMPONENT LABS
 
-var period2 =
+var neuro =
 [
 	['Neuropath Lab 01', 'Neuro_Lab01', 'Cerebrovascular Disease and CNS', Neuro_Lab01],
 	['Neuropath Lab 02', 'Neuro_Lab02', 'Pediatric and Degenerative Diseases', Neuro_Lab02],
 	['Neuropath Lab 03', 'Neuro_Lab03', 'Infections and Myelin Disorders', Neuro_Lab03],
-	['Neuropath Lab 04', 'Neuro_Lab04', 'Trauma and other Topics', Neuro_Lab04],
+	['Neuropath Lab 04', 'Neuro_Lab04', 'Trauma and other Topics', Neuro_Lab04]
+];
+
+var bjs =
+[
     ['Bone Joint & Skin Lab 01', 'BJS_Lab01', 'Soft Tissue Sacrcomas and Bone Tumors', BJS_Lab01],
 	['Bone Joint & Skin Lab 02', 'BJS_Lab02', 'Pathology of the Skin: Benign vs. Malignant', BJS_Lab02],
 	['Bone Joint & Skin Lab 03', 'BJS_Lab03', 'Osteomyelitis and Joint Pathology', BJS_Lab03],
 ];
 
-console.log(period2);
-
 // ENDO LAB 01 COMPONENTS
 
-var minicase50 = 
+var minicase50 =
 [
 	['Endo_Lab1_01.jpg', 'Clinical examination of the thyroid gland.'],
 	['Endo_Lab1_02.jpg', 'Radio-isotope scan of thyroid showing a cold nodule.'],
 	['Endo_Lab1_03.jpg', 'Illustration of a needle aspirate.'],
 	['Endo_Lab1_06.jpg', 'Needle aspirate of papillary carcinoma showing nuclear clearing.'],
 	['Endo_Lab1_07.jpg', 'Needle aspirate of papillary carcinoma showing marked nuclear grooving.'],
-	
+
 
 	['Endo_Lab1_11.jpg', 'Medium power demonstrates a nuclear pseudoinclusion and subtle nuclear grooves.'],
-	
+
 ];
 
 var micro151 =
@@ -1233,7 +1228,7 @@ var micro151 =
 	['Endo_Lab1_16.jpg', 'Gross presentation of Hashimoto\'s thyroiditis.'],
 	['Endo_Lab1_17.jpg', 'Lymphoid infiltrates, both diffuse and nodular, are interspersed throughout thyroid parenchyma.'],
 	['Endo_Lab1_18.jpg', 'Higher magnification illustrates lymphoid infiltrates around atrophic follicles with little colloid and showing transformation of the follicular epithelium to typical Hürthle cells. Note the pink / eosinophilic cytoplasm of the Hürthle cells.'],
-	['Endo_Lab1_19.jpg', 'Lymphoid nodule containing germinal center is adjacent to atrophic follicles.']	
+	['Endo_Lab1_19.jpg', 'Lymphoid nodule containing germinal center is adjacent to atrophic follicles.']
 ];
 
 var micro157 =
@@ -1263,14 +1258,14 @@ var micro340 =
 	['Endo_Lab1_34.jpg', 'Higher magnification demonstrating solid trabeculae of microfollicles.']
 ];
 
-var micro197 = 
+var micro197 =
 [
 	//['Endo_Lab1_36.jpg', 'Papillary thyroid carcinoma demonstrating unencapsulated sclerotic area. Papillary carcinomas are usually unencapsulated and have an infiltrative appearance. They may also be multifocal.'],
 	['Endo_Lab1_08.jpg', 'Gross picture of papillary carcinoma. The non-neoplastic thyroid has a dark orange-brown color while the carcinoma is light tan.'],
 	['Endo_Lab1_38.jpg', 'Low power photomicrograph showing areas of papillary carcinoma with dense fibrous stroma. Normal follicles are present for comparison along one margin.'],
 	['Endo_Lab1_09.jpg', 'Low power view of papillary carcinoma showing papillae with fibrovascular cores lined by neoplastic cells.'],
-	['Endo_Lab1_10.jpg', 'Medium power demonstrates cleared nuclei and nuclear overlapping.'],	
-	['Endo_Lab1_13.jpg', 'Comparison of papillary carcinoma and normal thyroid. Note the differences in the nuclei.'],	
+	['Endo_Lab1_10.jpg', 'Medium power demonstrates cleared nuclei and nuclear overlapping.'],
+	['Endo_Lab1_13.jpg', 'Comparison of papillary carcinoma and normal thyroid. Note the differences in the nuclei.'],
 	['Endo_Lab1_43.jpg', 'Pseudonuclear inclusion of papillary carcinoma.'],
 	['Endo_Lab1_05.jpg', 'High power view of needle aspirate showing a cell with a nuclear pseudoinclusion. Some nuclei also appear grooved.'],
 	['Endo_Lab1_37.jpg', 'Fine-needle aspiration (FNA) of papillary thyroid carcinoma showing grooved nuclei in a "coffee bean" configuration.'],
@@ -1295,14 +1290,14 @@ var micro341 =
 ];
 
 var minicase51 =
-[	
+[
 	['Endo_Lab1_51.jpg', 'Gross picture of a parathyroid adenoma, quite large, and orange-brown in color. The gland is soft because of a relative paucity of stroma.'],
 	['Endo_Lab1_52.jpg', 'Low magnification picture of a parathyroid adenoma and the immediately adjacent normal parathyroid gland from which the adenoma evolved. If frozen section of the tumor during surgery demonstrates the normal gland adjacent to the tumor, this is good evidence that adequate surgery has been performed because multiple adenomas are a rarity. This also excludes diffuse hyperplasia.'],
 	['Endo_Lab1_53.jpg', 'High power magnification of the adenoma. Note significant pleomorphism of tumor cell nuclei. Such pleomorphism is common in endocrine adenomas and does not indicate malignancy.']
 ];
 
 var lab01em =
-[	
+[
 	['Endo_Lab1_54.jpg', 'Low power EM demonstrates chief cells in various stages of parathormone synthesis. Resting cells (RC) contain fairly abundant glycogen (G) and scant endoplasmic reticulum. An adjacent synthesizing cell (SC) demonstrates increased endoplasmic reticulum frequently forming parallel arrays (*). A portion of a chief cell in the secretory phase (SP) demonstrates numerous secretory granules (arrows) that have marginated along the cell periphery.'],
 	['Endo_Lab1_55.jpg', 'A chief cell in the parathormone synthesizing stage contains prominent dilated endoplasmic reticulum (arrows) containing finely granular material indicative of protein synthesis. A few secretory granules (S) are also present. Cell nucleus (N).'],
 	['Endo_Lab1_56.jpg', 'Electron micrograph at relatively low magnification demonstrates a cellular aggregate of fairly uniform tumor cells. Nuclei (N) demonstrates clumped chromatin, invaginations, and occasional prominent nucleoli (*). Arrows indicate small neurosecretory granules. A focus of extracellular filamentous material probably represents a small deposit of amyloid (A).'],
@@ -1638,7 +1633,7 @@ var repro_lab01_case02 =
 var repro_lab01 =
 [
     ['Case 1', 'Benign Prostatic Hypertrophy', repro_lab01_case01, repro_lab01_dir, "@3852"],
-	['Case 2', 'Prostatic Adenocarcinoma', repro_lab01_case02, repro_lab01_dir, "@3854"],	
+	['Case 2', 'Prostatic Adenocarcinoma', repro_lab01_case02, repro_lab01_dir, "@3854"],
 	['Case 3', 'Testicular Atrophy', micro154, repro_lab01_dir, "@3895"],
 	['Case 4', 'Seminoma of the Testis', micro146, repro_lab01_dir, "@3897"],
 	//['Micro 149', 'Lymphoma of the Testis', micro149, repro_lab01_dir, "@3898"],
@@ -1653,18 +1648,18 @@ var minicase42 =
 	['Slide001.jpg', 'Graph of breast masses by age group.'],
 	['Slide003.jpg', 'Photomicrograph of FA. The tumor is composed of a loose hypocellular stroma ("fibro"), and bland compressed glands ("adino") lined with benign epithelium.'],
 	['Slide004.jpg', 'Age curve of breast cancer frequency.'],
-	
-	
-	
+
+
+
 	['Slide009.jpg', 'Photomicrograph of proliferative FCC. Higher power of the ductal elements showing ductal hyperplasia without atypia. Notice the irregular "slit-like spaces" within the hyperplastic glands. This is a sign of its benign nature.'],
 	['Slide011.jpg', 'Table of breast cancer risk factors.'],
-	
+
 	['Slide013.jpg', 'Photo of ultrasound of a cyst. Notice the dark sounded hypoechoic mass.'],
-	
-	
+
+
 	['Slide017.jpg', 'Survival curves by stage.'],
-	
-	
+
+
 ];
 
 var micro111 =
@@ -1721,8 +1716,8 @@ var micro362 =
 
 var micro363 =
 [
-	
-	
+
+
 	//['Repro_Lab2_26.jpg', 'Low magnification of fibroadenoma change in fibrocystic background.']
 ];
 
@@ -1940,19 +1935,24 @@ var repro_lab03 =
 	['Micro 337', 'Polycystic Ovary', micro337, repro_lab03_dir, "@3833"]
 ];
 
-var HD3 =
+var endo =
 [
 	['Endocrine Lab', 'endo_lab', 'Thyroid, Parathyroid, Pituitary, and Adrenal', endo_lab],
+];
+
+var renal =
+[
 	['Renal Lab 01', 'renal_lab01', 'Renal Neoplasia, Renal Malformation, Cystic Disorders, Lower UT Neoplasia', renal_lab01],
 	['Renal Lab 02', 'renal_lab02', 'Acute Nephritic Syndromes, Rapidly Progressive Glomerulonephritis, Hematuria', renal_lab02],
 	['Renal Lab 03', 'renal_lab03', 'Nephrotic Syndrome', renal_lab03],
-    ['Repro Lab 01', 'repro_lab01', 'Testis and Prostate', repro_lab01],
+];
+
+var repro =
+[
+   ['Repro Lab 01', 'repro_lab01', 'Testis and Prostate', repro_lab01],
 	['Repro Lab 02', 'repro_lab02', 'Breast', repro_lab02],
     ['Repro Lab 03', 'repro_lab03', 'Ovary and Uterus', repro_lab03],
 ];
-
-console.log(HD3);
-
 
 // HEME LAB 01 COMPONENTS
 
@@ -1984,13 +1984,13 @@ var micro46311 =
 var micro4749 =
 [
 	['Slide16.jpg', 'Frequent target cells.  Rare basophilic stippling (upper left)'],
-	['Slide17.jpg', 'Frequent target cells.  Rare basophilic stippling (upper right)']	
+	['Slide17.jpg', 'Frequent target cells.  Rare basophilic stippling (upper right)']
 ];
 
 var heinz_body_anemia =
 [
     ['Heinz1.jpg', 'Bite cells, increased polychromasia, leukoerythroblastosis'],
-	['Heinz2.jpg', 'Bite cells, increased polychromasia, leukoerythroblastosis']	
+	['Heinz2.jpg', 'Bite cells, increased polychromasia, leukoerythroblastosis']
 ];
 
 var micro534253bm =
@@ -2141,7 +2141,7 @@ var lymphoplasmacytic_lymphoma =
     ['LymphoplasmacyticLymphoma2.jpg', 'Small mature lymphocytes and plasma cells'],
     ['LymphoplasmacyticLymphoma3.jpg', 'Marrow replaced by neoplasm'],
     ['LymphoplasmacyticLymphoma4.jpg', 'Small mature lymphocytes and plasma cells'],
-];	
+];
 
 // HEME LAB COLLECTIONS
 
@@ -2185,7 +2185,7 @@ var blood_lab04 =
     ['Micro 310', 'Chronic Lymphocytic Leukemia', micro310, blood_lab03_dir, '@14029'],
 	['Micro 41', 'Acute Lymphoblastic Leukemia', micro41, blood_lab03_dir, '@14032'],
     ['Micro 29', 'Multiple Myeloma', micro29, blood_lab04_dir, '@14025'],
-    ['Lymphoplasmacytic Lymphoma', 'Lymphoplasmacytic Lymphoma (Waldenstrom Macroglobulinemia)', lymphoplasmacytic_lymphoma, blood_lab04_dir,],	
+    ['Lymphoplasmacytic Lymphoma', 'Lymphoplasmacytic Lymphoma (Waldenstrom Macroglobulinemia)', lymphoplasmacytic_lymphoma, blood_lab04_dir,],
 ];
 
 var blood_lab05 =
@@ -2205,8 +2205,6 @@ var heme =
     ['Blood Lab 04', 'blood_lab04', 'Acute and Chronic Leukemias; Reactive Leukocytosis', blood_lab04],
     ['Blood Lab 05', 'blood_lab05', 'Lymph Node Disorders', blood_lab05],
 ];
-
-console.log(heme);
 
 // GI LAB 01 COMPONENTS
 
@@ -2439,7 +2437,7 @@ var gi_lab03_case08 =
 ];
 
 
-var acute_pancreatitis = 
+var acute_pancreatitis =
 [
     ['Slide03.jpg', 'This image is meant to schematically show how the pancreas can get focally injured when excess alcohol consumption can lead to focal inflammation. The inflammation is cause by release of excess pancreatic enzymes, which are released in an effort to break down the alcohol, consumed and are released into the blood and abdominal cavity.'],
     ['Slide04.jpg', 'This image shows what happens when acute pancreatitis is caused by the blockage of the common bile duct by gallstones. When pancreatic enzymes are released after the ingestion of food they are blocked by the gallstones that are blocking the pancreatic duct and then the enzymes begin to breakdown the pancreas parenchyma and mesenteric fat leading to inflammation and pain.'],
@@ -2456,7 +2454,7 @@ var acute_pancreatitis =
     ['Slide15.jpg', 'This high-power photomicrograph shows the acute inflammatory cells that have infiltrated the pancreatic parenchyma and have attached the acini, dusts and islets and have left necrotic debris. The proteolytic enzyme digestion of the tissue damages the blood vessels resulting in interstitial hemorrhage and edema.'],
 ];
 
-var chronic_pancreatitis = 
+var chronic_pancreatitis =
 [
     ['Slide17.jpg','This image shows a pancreas that has been cross-sectioned and it is shrunken and fibrotic. The main duct is dilated and within the lumen you see that it is filled with calcifications that are pointed to by the arrows.'],
     ['Slide18.jpg','Another gross photograph of a cross section of pancreas showing chronic pancreatitis with multifocal fat necrosis and fibrosis'],
@@ -2471,20 +2469,20 @@ var chronic_pancreatitis =
     ['Slide27.jpg','In this composite of H & E images you see in (a) the wall of a pseudocyst showing an outer layer composed of connective tissue and an inner layer consisting of granulation of granulation tissue surrounding fat necrosis. In the B image you see an interlobular inflammatory infiltrate consisting of macrophages, myofibroblasts, and some lymphocytes. In the C image you see inter and intra lobular fibrosis surrounding an unaffected islet. In the D image you see an interlobular duct that contains a calculus with an inflammatory reaction in the adjacent area.'],
 ];
 
-var pancreatic_adenocarcinoma = 
+var pancreatic_adenocarcinoma =
 [
     ['Slide29.jpg','Pancreatic cancer has been brought to the forefront by the diagnoses of several prominent figures including actors Patrick Swayze, Michael Landon, singers Aretha Franklin and Luciano Pavarotti, Scott LeDoux, and Apple cofounder and CEO Steve Jobs, who has undergone a liver transplant for metastatic disease, and who recently announced he was having recurrent issues, and US Supreme Court Justice Ruth Bader Ginsburg, whose cancer was found early and incidentally. Pancreatic cancer ranks as the fourth deadliest cancer and equally affects men and women.'],
     ['Slide30.jpg','Pancreatic cancer is called a ‚Äúsilent‚Äù disease because usually symptoms do not present themselves in the early stages. As the cancer grows, pain often develops in the upper abdomen as is did in the case, and sometimes spreads to the back. Other symptoms may include jaundice, scleral icterus as seen in this photograph, nausea, loss of appetite and weight loss as in this case, fatigue, weakness, and depression.'],
     ['Slide32.jpg','To help make the diagnosis, imaging tests are performed, such as an ultrasound or CT scan. The green regions shown in this colorized CT scan show the cancer in the pancreas and liver. The definitive diagnosis comes from a biopsy.'],
-    ['Slide31.jpg','Gross photograph of pancreatic adenocarcinoma, head of pancreas'], 
-    ['Slide33.jpg','Pancreatic adenocarcinoma, tail of pancreas (as in this case study)'], 
-    ['Slide34.jpg','Pancreatic adenocarcinoma in tail of spleen and invading the spleen'], 
+    ['Slide31.jpg','Gross photograph of pancreatic adenocarcinoma, head of pancreas'],
+    ['Slide33.jpg','Pancreatic adenocarcinoma, tail of pancreas (as in this case study)'],
+    ['Slide34.jpg','Pancreatic adenocarcinoma in tail of spleen and invading the spleen'],
     ['Slide35.jpg','Gross photo of pancreatic adenocarcinoma that has metastasized to the liver'],
     ['Slide36.jpg','Photomicrograph of pancreatic adenocarcinoma (low power)'],
     ['Slide37.jpg','Photomicrograph of pancreatic adenocarcinoma (high power)'],
 ];
 
-var sclerosing_cholangitis = 
+var sclerosing_cholangitis =
 [
     ['Slide43.jpg','This image shows the normal bile ducts at the top and the inflammation and scar tissue that destroys the intralobular bile ducts in the lower image.'],
     ['Slide44.jpg','PSC is a chronic fibrosing inflammatory process that eventually obliterates the biliary system and eventually causes biliary cirrhosis. The structures are located in both the intra- and extra-hepatic bile ducts. This image diagrammatically shows how the process progresses with the corresponding ERCP cholangiogram shown in the lower right.'],
@@ -2496,17 +2494,17 @@ var sclerosing_cholangitis =
     ['Slide50.jpg','This image shows a H&E photomicrograph of a cholangiocarcinoma which the patient in the case study developed. The incidence of cholangiocarcinomas developing in cases of PSC is unfortunately high. Cholangiocarcinomas arise from the intrahepatic bile duct epithelium. This example is a well-differentiated tubular adenocarcinoma.'],
 ];
 
-var biliary_cirrhosis = 
+var biliary_cirrhosis =
 [
     ['Slide54.jpg','In this photograph of the exterior of a liver, you can see the long-term effects of PBC with scarring, fibrosis, and cirrhosis.'],
     ['Slide55.jpg','In this photograph of a cut section of liver you also see scarring, fibrosis and cirrhosis.'],
     ['Slide56.jpg','On this CT scan you can see the mixed micro- and macronodular cirrhosis in a patient with end-stage PBC.'],
     ['Slide57.jpg','Florid duct lesion (low power) '],
-    ['Slide58.jpg','Inflammation centered on duct (arrow pointing to florid duct lesion ‚Äì a later stage)'], 
+    ['Slide58.jpg','Inflammation centered on duct (arrow pointing to florid duct lesion ‚Äì a later stage)'],
     ['Slide59.jpg','In this high-power H&E view of a interlobular bile duct you see a granulomatous cholangitis with a surrounding dense lymphoplasmacytic infiltrate. You can see that there is focal rupture of the lining of the duct.'],
     ['Slide60.jpg','In this low-power H&E photomicrograph you can see the interstitial hepatic fibrosis around a hepatic triad. '],
     ['Slide61.jpg','PBC, low power of fibrosis formation'],
-    ['Slide62.jpg','In this image, you see relatively normal hepatic parenchyma on the left and fibrosis and inflammatory infiltrate on the right'],	
+    ['Slide62.jpg','In this image, you see relatively normal hepatic parenchyma on the left and fibrosis and inflammatory infiltrate on the right'],
     ['Slide63.jpg','In this H&E photomicrograph you can see two well-formed nodules of relatively unaffected hepatic parenchyma surrounded by fibrosis'],
     ['Slide64.jpg','In this final high-power photomicrograph you see the marked bilirubin (bilirubin stain) in hepatocytes, canaliculi, and Kupffer cells.'],
 ];
@@ -2521,11 +2519,11 @@ var celiac_disease =
 [
     ['Slide46.jpg','Celiac disease is considered an autoimmune disease and a disease of malabsorption. A patient with the disease develops a reaction to products with gluten and eventually the villi in the small intestine are damaged or destroyed so that nutrients from food cannot be absorbed into the bloodstream. This first image shows how the small intestine mucosa eventually becomes atrophied.'],
     ['Slide47.jpg','Photomicrograph of the normal small intestine'],
-    ['Slide48.jpg','In this photomicrograph you can see a marked contrast to the normal small intestine mucosa with marked villous atrophy and inflammation'], 
-    ['Slide49.jpg','This high-power photomicrograph further shows plasma cells in the lamina propria and the infiltration of the absorptive epithelium.'], 
-    ['Slide50.jpg','This image shows an endoscopy of the normal small intestine mucosa.'], 
-    ['Slide51.jpg','Image showing endoscopy of the small intestine mucosa in celiac disease. Notice the loss of normal mucosal folding. The inset shows the scalloping of the mucosal folds characteristic of the disease.'], 
-    ['Slide52.jpg','This is an algorithm that is used to evaluate a patient suspected of having celiac disease.'], 
+    ['Slide48.jpg','In this photomicrograph you can see a marked contrast to the normal small intestine mucosa with marked villous atrophy and inflammation'],
+    ['Slide49.jpg','This high-power photomicrograph further shows plasma cells in the lamina propria and the infiltration of the absorptive epithelium.'],
+    ['Slide50.jpg','This image shows an endoscopy of the normal small intestine mucosa.'],
+    ['Slide51.jpg','Image showing endoscopy of the small intestine mucosa in celiac disease. Notice the loss of normal mucosal folding. The inset shows the scalloping of the mucosal folds characteristic of the disease.'],
+    ['Slide52.jpg','This is an algorithm that is used to evaluate a patient suspected of having celiac disease.'],
     ['Slide53.jpg','Here is a table of serologic tests that can be performed for a patient suspected of having celiac disease.'],
 ];
 
@@ -2587,8 +2585,6 @@ var gi =
 	['GI Lab 03', 'gi_lab03', 'Biliary Tract and Pancreas', gi_lab03],
     ['GI Lab 04', 'gi_lab04', 'Upper and Lower Gastrointestinal Tract', gi_lab04],
 ];
-
-console.log(gi);
 
 // LAB 01 COMPONENTS
 
@@ -3320,7 +3316,7 @@ var Summer_Lab01 =
 	['Mini-Case 27', 'Acute Myocardial Infarction', minicase27, summer_lab01_dir, ],
 	['Micro 161', 'Acute Myocardial Infarct', micro161, summer_lab01_dir, '@1775'],
 	['Micro 163', 'Heart, Healing Infarct', micro163, summer_lab01_dir, '@1736'],
-	['Micro UH86-6206', 'Subacute Myocardial Infarct', UH86_6206, summer_lab01_dir, '@1739'] 
+	['Micro UH86-6206', 'Subacute Myocardial Infarct', UH86_6206, summer_lab01_dir, '@1739']
 ];
 
 var Summer_Lab02 =
@@ -3381,7 +3377,7 @@ var Summer_Lab06 =
 	['Case 2', 'Hemolytic Anemia', hemolyticAnemia, summer_lab06_dir, ],
 	['Case 3', 'Rheumatoid Diseases', rheumatoidDZ, summer_lab06_dir, ],
 	['Case 4', 'Multiple Sclerosis', MS, summer_lab06_dir, ],
-	['Case 5', 'Systemic Lupus Erythematosis', SLE, summer_lab06_dir, ]	
+	['Case 5', 'Systemic Lupus Erythematosis', SLE, summer_lab06_dir, ]
 ];
 
 var Summer_Lab07 =
@@ -3451,5 +3447,3 @@ var summer =
 	['Lab 11', 'Summer_Lab11', 'Carcinoma: Benign vs. Malignant', Summer_Lab11],
 	['Lab 12', 'Summer_Lab12', 'Adenocarcinoma:  Concepts of Stage and Grade', Summer_Lab12]
 ];
-
-console.log(summer);
