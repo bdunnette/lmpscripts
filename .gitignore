@@ -43,3 +43,4 @@ cookies.txt
 *.csv
 *.obo
 .DS_Store
+*_config.py

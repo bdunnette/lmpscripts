@@ -12,10 +12,12 @@ for (collection in collections) {
 			console.log(case_data);
 			case_title = case_data[1].toString();
 			case_resources = case_data[2];
+			case_images = new Array()
 			for (resource in case_resources) {
 				resource_data = case_resources[resource];
-				document.write([['http://160.94.51.142/meded', lab_path.toLowerCase(), '_images', resource_data[0]].join('/'), JSON.stringify(case_title), JSON.stringify(resource_data[1].replace(/"/g,'\''))].join(), '<br/>');
+				case_images.push(resource_data);
 			};
+			document.write(JSON.stringify({'case': case_title, 'resources': case_images}) + ",");
 		};
 	};
 };
