@@ -21,4 +21,5 @@ for item in item_list:
 				marked_file_local = open(marked_filename, "wb")
 				marked_file_local.write(marked_file.content)
 				marked_file_local.close()
+				# Unfortunately, when posting both file and data, requests 1.2.3 doesn't seem to be compatible with Omeka's API... so we'll shell out to curl.
 				call("/usr/bin/curl --form file=@%s --form data='{\"item\": {\"id\":%s}}' %sfiles?key=%s" % (marked_filename, item['id'], api_endpoint, api_key), shell=True)
